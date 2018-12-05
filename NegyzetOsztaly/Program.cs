@@ -36,6 +36,17 @@ namespace NegyzetOsztaly
     {
         static void Main(string[] args)
         {
+            try
+            {
+                Negyzet n = new Negyzet(-5);
+                Console.WriteLine("Terület:" +
+                    n.getTerulet());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.ReadKey();
         }
     }
 }
