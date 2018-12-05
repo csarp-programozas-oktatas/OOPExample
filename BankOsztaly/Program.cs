@@ -48,6 +48,19 @@ namespace BankOsztaly
     {
         static void Main(string[] args)
         {
+            try
+            {
+                Szamla a = new Szamla(100);
+                Console.WriteLine(a);
+                Szamla b = new Szamla(-10);
+                a.befizetSzamlara(-5);
+                a.kiveszSzamlarol(300);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.ReadKey();
         }
     }
 }
